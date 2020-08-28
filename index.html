@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Student-Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer charset="utf-8"></script>
+  </head>
+  <body>
+    <section class="wave">
+
+    </section>
+
+    <div class="log-box">
+      <h1>Candidate Information</h1>
+          <form action="#" id="register" name="register" >
+            <div class="form-group">
+              <label for="fname"> Full Name:- </label> <br />
+              <input name="fname" id="fname" type="text" maxlength="30" required autocomplete="off" />
+              <p id="errmsg0" class="warning"> </p>
+            </div>
+
+            <div class="form-group">
+              <label for="Gender">Gender:</label>
+                 <select class="gender-submit" name="Gender" size="1">
+                   <option value="Male">Male</option>
+                   <option value="Female">Female</option>
+                   <option value="Female">other</option>
+                 </select><br>
+            </div>
+
+            <div class="form-group">
+             <label for="address"> Address:-</label><br>
+             <textarea name="Address" id="Address" placeholder="#1, North Street,Pune Maharashtra-411014" class="Address" rows="6" cols="67"></textarea>
+              <p id="errmsg1" class="warning" > </p>
+            </div>
+
+            <div class="form-group">
+              <label for="emailid"> Email :- </label><br/>
+              <input name="emailid" id="emailid" type="email" required  autocomplete="off" />
+              <p id="errmsg2" class="warning"  > </p>
+            </div>
+
+            <div class="form-group">
+              <label for="phonenum"> Phone Number :-</label><br />
+              <input name="phonenum" id="phonenum"  maxlength="10" type="tel" required onkeypress="return restrictAlphabets(event)"  autocomplete="off" />
+              <p id="errmsg3" class="warning"  > </p>
+            </div>
+
+
+            <div class="form-group eduform" >
+               <label for="edu">Add Education:-</label><br>
+               <p id="errmsg4" class="warning">  </p>
+               <p id="errmsg5" class="warning">  </p>
+              <form class="eduform" action="#" method="post">
+              <table id="education" >
+                <thead>
+                  <tr>
+                    <th class="level">Level</th>
+                    <th class="year" >Year</th>
+                    <th class="grade">Grade/(%)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><select class="education" name="education" size="1">
+                      <option value="SSC">SSC</option>
+                      <option value="HSC">HSC</option>
+                      <option value="Diploma">Diploma</option>
+                      <option value="BE">BE</option>
+                      <option value="Btech">Btech</option>
+                      <option value="BCA">BCA</option>
+                      <option value="MCA">MCA</option>
+                    </select> </td>
+                    <td><input type="text" id="year" name="year" value="" placeholder="2011" maxlength="4" required onkeypress="return restrictAlphabets(event)"></td>
+                    <td><input type="text" id="grade" maxlength="2"  name="grade" value=""></td>
+                  </tr>
+               </tbody>
+             </table><br>
+             <table  class="newtable" id="newedu">
+
+             </table>
+            </form>
+              </div>
+              <input type="button" id="addedu"name="button" class="submit" value="Add ">
+              <input type="button" id="remove" name="button" class="submit" disabled value="Remove">
+
+           <div class="form-group skillform">
+            <label for="addskill"> Add Skills:-</label><br>
+             <p id="errmsg6" class="warning"> </p>
+            <form class="skillform" action="#" method="post">
+            <table >
+              <thead>
+                <tr>
+                  <th class="skillname">Name</th>
+                  <th class="rating" >Rating</th>
+                </tr>
+              </thead>
+              <tbody id="skill">
+                <tr>
+                  <td><input type="text" id="skillname" maxlength="12" placeholder="java"  name="skillname" value=""></td>
+                  <td> <select id="rating" class="garde numlist" size="1" name="skillrate">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select> </td>
+                </tr>
+             </tbody>
+            </table>
+            <table>
+              <tbody id="newskill">
+
+              </tbody>
+            </table>
+            </form>
+            <input type="button" id="skilladd"name="button" class="submit skilladd" value="Add ">
+           <input type="button" id="skilldelete" name="button" class="submit skilldelete" disabled value="Remove">
+         </div><br>
+
+          <div class="form-group hobbies">
+            <label for="hobbies"> Hobbies :- </label><br/>
+            <input name="hobbies" id="hobbies" type="text" placeholder="Singing Dancing" required  autocomplete="off" />
+              <p id="errmsg7" class="warning"> </p>
+          </div><br>
+
+          <div class="form-group">
+            <label for="photo"> Photo :- </label><br/>
+            <input name="photo" id="photo" type="url"  placeholder="link to your online photo" required  autocomplete="off" />
+              <p id="errmsg8" class="warning"> </p>
+          </div>
+            <button type="button" id="submit" disabled class="final submit">Submit</button>
+          </form>
+</div>
+  </body>
+</html>
