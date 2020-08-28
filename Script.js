@@ -276,6 +276,6 @@ document.getElementById("photo").addEventListener("keyup",function urlValidate()
         }
       }
 
-     location.replace("Success.html");
+     location.replace("success.html");
      return true;
     });
