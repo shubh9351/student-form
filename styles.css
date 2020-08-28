@@ -217,15 +217,4 @@ label{
     width: 700px;
     height: 1700px;
   }
-  .wave::before{
-  content:"";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 80%;
-  height: 250px;
-  background-image: url(wave.png);
-  background-size:cover;
-  background-repeat:repeat;
-  }
-}
+ 
